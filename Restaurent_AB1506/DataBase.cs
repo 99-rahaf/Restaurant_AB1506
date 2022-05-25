@@ -20,7 +20,7 @@ namespace Restaurant_AB1506
 
         void GetAllCourses()
         {
-            OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; " + "Data Source = C:\\Users\\SCHOOL\\Desktop\\rahaf\\Restaurant_AB1506.accdb");
+            OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; " + "Data Source = C:\\Users\\SCHOOL\\Desktop\\rahaf AB1506\\Restaurant_AB1506.accdb");
             DataTable dt = new DataTable();
             OleDbDataAdapter adapter = new OleDbDataAdapter("Select * from Courses", con);
             con.Open();
@@ -36,7 +36,7 @@ namespace Restaurant_AB1506
 
         private void btnInsert_Click_1(object sender, EventArgs e)
         {
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; " + "Data Source=C:\\Users\\SCHOOL\\Desktop\\rahaf\\Restaurant_AB1506.accdb");
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; " + "Data Source=C:\\Users\\SCHOOL\\Desktop\\rahaf AB1506\\Restaurant_AB1506.accdb");
             con.Open();
             OleDbCommand cmd = new OleDbCommand("Insert into Courses values(@ID, @Student, @IdNumber)", con);
             cmd.Parameters.AddWithValue("@ID", int.Parse(txtID.Text));
@@ -52,7 +52,7 @@ namespace Restaurant_AB1506
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
             string update = "UPDATE courses" + " SET student=@Student, idnumber=@IdNumber " + "WHERE id=@ID";
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; " + "Data Source=C:\\Users\\SCHOOL\\Desktop\\rahaf\\Restaurant_AB1506.accdb");
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; " + "Data Source=C:\\Users\\SCHOOL\\Desktop\\rahaf AB1506\\Restaurant_AB1506.accdb");
             con.Open();
             OleDbCommand cmd = new OleDbCommand(update, con);
             cmd.Parameters.AddWithValue("@ID", Convert.ToInt32(txtID.Text));
@@ -68,7 +68,7 @@ namespace Restaurant_AB1506
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string delete = "Delete From courses Where ID=@ID";
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; " + "Data Source=C:\\Users\\SCHOOL\\Desktop\\rahaf\\Restaurant_AB1506.accdb");
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; " + "Data Source=C:\\Users\\SCHOOL\\Desktop\\rahaf AB1506\\Restaurant_AB1506.accdb");
 
             OleDbCommand cmd = new OleDbCommand(delete, con);
             cmd.Parameters.AddWithValue("@ID", Convert.ToInt32(txtID.Text));
