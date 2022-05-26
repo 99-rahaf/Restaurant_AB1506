@@ -38,10 +38,10 @@ namespace Restaurant_AB1506
         {
             OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; " + "Data Source=C:\\Users\\SCHOOL\\Desktop\\rahaf AB1506\\Restaurant_AB1506.accdb");
             con.Open();
-            OleDbCommand cmd = new OleDbCommand("Insert into Courses values(@ID, @Student, @IdNumber)", con);
+            OleDbCommand cmd = new OleDbCommand("Insert into Courses values(@ID, @Name, @Number)", con);
             cmd.Parameters.AddWithValue("@ID", int.Parse(txtID.Text));
-            cmd.Parameters.AddWithValue("@Student", txtName.Text);
-            cmd.Parameters.AddWithValue("@IdNumber", int.Parse(txtNumber.Text));
+            cmd.Parameters.AddWithValue("@Name", txtName.Text);
+            cmd.Parameters.AddWithValue("@Number", txtNumber.Text);
 
             cmd.ExecuteNonQuery();
             con.Close();
@@ -49,25 +49,9 @@ namespace Restaurant_AB1506
             GetAllCourses();
         }
 
-        private void btnUpdate_Click_1(object sender, EventArgs e)
-        {
-            string update = "UPDATE courses" + " SET student=@Student, idnumber=@IdNumber " + "WHERE id=@ID";
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; " + "Data Source=C:\\Users\\SCHOOL\\Desktop\\rahaf AB1506\\Restaurant_AB1506.accdb");
-            con.Open();
-            OleDbCommand cmd = new OleDbCommand(update, con);
-            cmd.Parameters.AddWithValue("@ID", Convert.ToInt32(txtID.Text));
-            cmd.Parameters.AddWithValue("@Student", txtName.Text);
-            cmd.Parameters.AddWithValue("@IdNumber", int.Parse(txtNumber.Text));
-
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Update is successfully");
-            GetAllCourses();
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string delete = "Delete From courses Where ID=@ID";
+            string delete = "Delete From Courses Where ID=@ID";
             OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; " + "Data Source=C:\\Users\\SCHOOL\\Desktop\\rahaf AB1506\\Restaurant_AB1506.accdb");
 
             OleDbCommand cmd = new OleDbCommand(delete, con);
