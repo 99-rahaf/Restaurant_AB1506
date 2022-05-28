@@ -35,11 +35,12 @@ namespace Restaurant_AB1506
             this.tsbtnClear = new System.Windows.Forms.ToolStripButton();
             this.tsbtnExit = new System.Windows.Forms.ToolStripButton();
             this.lblOrder = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lbOrder = new System.Windows.Forms.ListBox();
             this.lblAnswer = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
+            this.dmOrder = new System.Windows.Forms.NumericUpDown();
+            this.cmbOrder = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dmOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -50,14 +51,14 @@ namespace Restaurant_AB1506
             this.tsbtnExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(404, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(346, 25);
             this.toolStrip1.TabIndex = 15;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tsbtnShowTheOrder
             // 
             this.tsbtnShowTheOrder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbtnShowTheOrder.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tsbtnShowTheOrder.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold);
             this.tsbtnShowTheOrder.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnShowTheOrder.Image")));
             this.tsbtnShowTheOrder.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnShowTheOrder.Name = "tsbtnShowTheOrder";
@@ -68,7 +69,7 @@ namespace Restaurant_AB1506
             // tsbtnClear
             // 
             this.tsbtnClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbtnClear.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tsbtnClear.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold);
             this.tsbtnClear.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnClear.Image")));
             this.tsbtnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnClear.Name = "tsbtnClear";
@@ -79,7 +80,7 @@ namespace Restaurant_AB1506
             // tsbtnExit
             // 
             this.tsbtnExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbtnExit.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tsbtnExit.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold);
             this.tsbtnExit.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnExit.Image")));
             this.tsbtnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnExit.Name = "tsbtnExit";
@@ -90,60 +91,20 @@ namespace Restaurant_AB1506
             // lblOrder
             // 
             this.lblOrder.AutoSize = true;
-            this.lblOrder.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblOrder.Location = new System.Drawing.Point(15, 55);
+            this.lblOrder.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold);
+            this.lblOrder.Location = new System.Drawing.Point(13, 48);
             this.lblOrder.Name = "lblOrder";
             this.lblOrder.Size = new System.Drawing.Size(53, 18);
             this.lblOrder.TabIndex = 14;
             this.lblOrder.Text = "Order";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15"});
-            this.comboBox1.Location = new System.Drawing.Point(210, 75);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(51, 26);
-            this.comboBox1.TabIndex = 13;
-            // 
-            // lbOrder
-            // 
-            this.lbOrder.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbOrder.FormattingEnabled = true;
-            this.lbOrder.ItemHeight = 18;
-            this.lbOrder.Items.AddRange(new object[] {
-            "Shawarma",
-            "hamburger",
-            "fajita",
-            "zinger"});
-            this.lbOrder.Location = new System.Drawing.Point(15, 75);
-            this.lbOrder.Name = "lbOrder";
-            this.lbOrder.Size = new System.Drawing.Size(108, 94);
-            this.lbOrder.TabIndex = 18;
-            // 
             // lblAnswer
             // 
             this.lblAnswer.AutoSize = true;
             this.lblAnswer.BackColor = System.Drawing.Color.DarkSalmon;
-            this.lblAnswer.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAnswer.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold);
             this.lblAnswer.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAnswer.Location = new System.Drawing.Point(200, 116);
+            this.lblAnswer.Location = new System.Drawing.Point(155, 137);
             this.lblAnswer.Name = "lblAnswer";
             this.lblAnswer.Size = new System.Drawing.Size(0, 18);
             this.lblAnswer.TabIndex = 17;
@@ -151,29 +112,45 @@ namespace Restaurant_AB1506
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblQuantity.Location = new System.Drawing.Point(210, 55);
+            this.lblQuantity.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold);
+            this.lblQuantity.Location = new System.Drawing.Point(180, 48);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(71, 18);
             this.lblQuantity.TabIndex = 16;
             this.lblQuantity.Text = "Quantity";
             // 
+            // dmOrder
+            // 
+            this.dmOrder.Location = new System.Drawing.Point(205, 84);
+            this.dmOrder.Name = "dmOrder";
+            this.dmOrder.Size = new System.Drawing.Size(46, 20);
+            this.dmOrder.TabIndex = 20;
+            // 
+            // cmbOrder
+            // 
+            this.cmbOrder.FormattingEnabled = true;
+            this.cmbOrder.Location = new System.Drawing.Point(12, 83);
+            this.cmbOrder.Name = "cmbOrder";
+            this.cmbOrder.Size = new System.Drawing.Size(121, 21);
+            this.cmbOrder.TabIndex = 19;
+            // 
             // frmSandwiches
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tomato;
-            this.ClientSize = new System.Drawing.Size(404, 311);
+            this.ClientSize = new System.Drawing.Size(346, 270);
+            this.Controls.Add(this.dmOrder);
+            this.Controls.Add(this.cmbOrder);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lblOrder);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.lbOrder);
             this.Controls.Add(this.lblAnswer);
             this.Controls.Add(this.lblQuantity);
             this.Name = "frmSandwiches";
             this.Text = "Sandwiches";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dmOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,9 +163,9 @@ namespace Restaurant_AB1506
         private System.Windows.Forms.ToolStripButton tsbtnClear;
         private System.Windows.Forms.ToolStripButton tsbtnExit;
         private System.Windows.Forms.Label lblOrder;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListBox lbOrder;
         private System.Windows.Forms.Label lblAnswer;
         private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.NumericUpDown dmOrder;
+        private System.Windows.Forms.ComboBox cmbOrder;
     }
 }

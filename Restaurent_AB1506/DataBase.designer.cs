@@ -50,7 +50,7 @@ namespace Restaurant_AB1506
             this.dgwcourses.Name = "dgwcourses";
             this.dgwcourses.Size = new System.Drawing.Size(296, 126);
             this.dgwcourses.TabIndex = 0;
-            this.dgwcourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwcourses_CellContentClick);
+            this.dgwcourses.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwcourses_CellClick);
             // 
             // lblID
             // 

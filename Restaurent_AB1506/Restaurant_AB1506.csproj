@@ -52,6 +52,7 @@
     <Compile Include="Chicken Food.Designer.cs">
       <DependentUpon>Chicken Food.cs</DependentUpon>
     </Compile>
+    <Compile Include="Price.cs" />
     <Compile Include="DataBase.cs">
       <SubType>Form</SubType>
     </Compile>

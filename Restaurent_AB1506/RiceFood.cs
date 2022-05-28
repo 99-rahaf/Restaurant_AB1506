@@ -13,21 +13,32 @@ namespace Restaurant_AB1506
         public frmRiceFood()
         {
             InitializeComponent();
+            cmbOrder.Items.Add(new Price { Name = "biryani - $20", Value = 20 });
+            cmbOrder.Items.Add(new Price { Name = "Bukhari - $23", Value = 23 });
+            cmbOrder.Items.Add(new Price { Name = "Kabsa - $18", Value = 18 });
+            cmbOrder.Items.Add(new Price { Name = "makloba - $26", Value = 26 });
+            cmbOrder.Items.Add(new Price { Name = "uzy - $19", Value = 19 });
+            cmbOrder.Items.Add(new Price { Name = "mansaf - $40", Value = 40 });
         }
 
         private void tsbtnShowTheOrder_Click(object sender, EventArgs e)
         {
+            int x, y, d;
 
-            
-            lblAnswer.Text =" Order : \n" +  lbOrder.SelectedItem + "\n Quantity : \n " + comboBox1.Text;
+            x = Convert.ToInt32(((Price)cmbOrder.SelectedItem).Value);
+            y = Convert.ToInt32(dmOrder.Value);
+
+            d = x * y;
+
+            lblAnswer.Text =" Order : \n" +  cmbOrder.SelectedItem + "\n Quantity : \n " + dmOrder.Text + "\n Price : " + d;
 
 
         }
 
         private void tsbtnClear_Click(object sender, EventArgs e)
         {
-            lbOrder.Items.Clear();
-            comboBox1.SelectedIndex = -1;
+            cmbOrder.Items.Clear();
+            dmOrder.Value = 0;
         }
 
         private void tsbtnExit_Click(object sender, EventArgs e)

@@ -64,11 +64,13 @@ namespace Restaurant_AB1506
             GetAllCourses();
         }
 
-        private void dgwcourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgwcourses_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtID.Text = dgwcourses.CurrentRow.Cells[0].Value.ToString();
             txtName.Text = dgwcourses.CurrentRow.Cells[1].Value.ToString();
             txtNumber.Text = dgwcourses.CurrentRow.Cells[2].Value.ToString();
         }
+
+        
     }
 }
