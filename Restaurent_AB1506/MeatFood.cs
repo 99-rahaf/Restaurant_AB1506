@@ -5,33 +5,22 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Restaurant_AB1506
-{/*
-  grilled meet
-roasted meat
-sajya
-Shawarma*/
+{
     public partial class frmMeatFood : Form
     {
         public frmMeatFood()
         {
             InitializeComponent();
-            cmbOrder.Items.Add(new Price { Name = "grilled meet - $15", Value = 15 });
-            cmbOrder.Items.Add(new Price { Name = "roasted meat - $20", Value = 20 });
-            cmbOrder.Items.Add(new Price { Name = "sajya - $30", Value = 30 });
-            cmbOrder.Items.Add(new Price { Name = "Shawarma - $6", Value = 6 });
+            fill_ListBox();
         }
 
         private void tsbtnShowTheOrder_Click(object sender, EventArgs e)
         {
-            int x, y, d;
-
-            x = Convert.ToInt32(((Price)cmbOrder.SelectedItem).Value);
-            y = Convert.ToInt32(dmOrder.Value);
-
-            d = x * y;
-            lblAnswer.Text = " Order : \n" + cmbOrder.SelectedItem + "\n Quantity : \n " + dmOrder.Text + "\n Price : " + d;
+            
+            lblAnswer.Text = " Order : \n" + cmbOrder.SelectedItem + "\n Quantity : \n " + dmOrder.Text ;
         }
 
         private void tsbtnClear_Click(object sender, EventArgs e)
@@ -43,6 +32,38 @@ Shawarma*/
         private void tsbtnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void tsbtnAdd_Click(object sender, EventArgs e)
+        {
+            AddMeatFood addme = new AddMeatFood();
+            addme.Show();
+        }
+        string data = "Provider = Microsoft.ACE.OLEDB.12.0; " +
+            "Data Source = C:\\Users\\SCHOOL\\Desktop\\rahaf AB1506\\Restaurent_AB1506\\Restaurent_AB1506\\database\\Restaurant_AB1506.accdb";
+        void fill_ListBox()
+        {
+            try
+            {
+
+                OleDbConnection con = new OleDbConnection(data);
+                con.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = con;
+                string selection = "Select Meat_Food from MeatFood";
+                command.CommandText = selection;
+                OleDbDataReader myReader = command.ExecuteReader();
+
+                while (myReader.Read())
+                {
+                    cmbOrder.Items.Add(myReader["Meat_Food"].ToString());
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error  " + ex);
+            }
         }
     }
 }

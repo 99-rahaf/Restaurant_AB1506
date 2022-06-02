@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.OleDb;
+
 
 namespace Restaurant_AB1506
 {
@@ -13,24 +15,14 @@ namespace Restaurant_AB1506
         public frmRiceFood()
         {
             InitializeComponent();
-            cmbOrder.Items.Add(new Price { Name = "biryani - $20", Value = 20 });
-            cmbOrder.Items.Add(new Price { Name = "Bukhari - $23", Value = 23 });
-            cmbOrder.Items.Add(new Price { Name = "Kabsa - $18", Value = 18 });
-            cmbOrder.Items.Add(new Price { Name = "makloba - $26", Value = 26 });
-            cmbOrder.Items.Add(new Price { Name = "uzy - $19", Value = 19 });
-            cmbOrder.Items.Add(new Price { Name = "mansaf - $40", Value = 40 });
+            fill_ListBox();
         }
 
         private void tsbtnShowTheOrder_Click(object sender, EventArgs e)
         {
-            int x, y, d;
 
-            x = Convert.ToInt32(((Price)cmbOrder.SelectedItem).Value);
-            y = Convert.ToInt32(dmOrder.Value);
 
-            d = x * y;
-
-            lblAnswer.Text =" Order : \n" +  cmbOrder.SelectedItem + "\n Quantity : \n " + dmOrder.Text + "\n Price : " + d;
+            lblAnswer.Text =" Order : \n" +  cmbOrder.SelectedItem + "\n Quantity : \n " + dmOrder.Text ;
 
 
         }
@@ -44,6 +36,38 @@ namespace Restaurant_AB1506
         private void tsbtnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void tsbtnAdd_Click(object sender, EventArgs e)
+        {
+            AddRiceFood addri = new AddRiceFood();
+            addri.Show();
+        }
+        string data = "Provider = Microsoft.ACE.OLEDB.12.0; " +
+            "Data Source = C:\\Users\\SCHOOL\\Desktop\\rahaf AB1506\\Restaurent_AB1506\\Restaurent_AB1506\\database\\Restaurant_AB1506.accdb";
+        void fill_ListBox()
+        {
+            try
+            {
+
+                OleDbConnection con = new OleDbConnection(data);
+                con.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = con;
+                string selection = "Select Rice_Food from RiceFood";
+                command.CommandText = selection;
+                OleDbDataReader myReader = command.ExecuteReader();
+
+                while (myReader.Read())
+                {
+                    cmbOrder.Items.Add(myReader["Rice_Food"].ToString());
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error  " + ex);
+            }
         }
     }
 }

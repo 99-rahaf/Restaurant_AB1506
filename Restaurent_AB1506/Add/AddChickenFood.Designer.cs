@@ -1,7 +1,7 @@
 ﻿
 namespace Restaurant_AB1506
 {
-    partial class frmRiceFood
+    partial class AddChickenFood
     {
         /// <summary>
         /// Required designer variable.
@@ -29,42 +29,30 @@ namespace Restaurant_AB1506
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRiceFood));
-            this.lblOrder = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddChickenFood));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnShowTheOrder = new System.Windows.Forms.ToolStripButton();
             this.tsbtnAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbtnClear = new System.Windows.Forms.ToolStripButton();
             this.tsbtnExit = new System.Windows.Forms.ToolStripButton();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.lblAnswer = new System.Windows.Forms.Label();
-            this.cmbOrder = new System.Windows.Forms.ComboBox();
-            this.dmOrder = new System.Windows.Forms.NumericUpDown();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dmOrder)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblOrder
-            // 
-            this.lblOrder.AutoSize = true;
-            this.lblOrder.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold);
-            this.lblOrder.Location = new System.Drawing.Point(13, 48);
-            this.lblOrder.Name = "lblOrder";
-            this.lblOrder.Size = new System.Drawing.Size(53, 18);
-            this.lblOrder.TabIndex = 2;
-            this.lblOrder.Text = "Order";
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbtnShowTheOrder,
             this.tsbtnAdd,
+            this.tsbtnShowTheOrder,
             this.tsbtnClear,
             this.tsbtnExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(346, 25);
-            this.toolStrip1.TabIndex = 3;
+            this.toolStrip1.Size = new System.Drawing.Size(298, 25);
+            this.toolStrip1.TabIndex = 16;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tsbtnShowTheOrder
@@ -74,9 +62,9 @@ namespace Restaurant_AB1506
             this.tsbtnShowTheOrder.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnShowTheOrder.Image")));
             this.tsbtnShowTheOrder.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnShowTheOrder.Name = "tsbtnShowTheOrder";
-            this.tsbtnShowTheOrder.Size = new System.Drawing.Size(116, 22);
-            this.tsbtnShowTheOrder.Text = "Show The Order";
-            this.tsbtnShowTheOrder.Click += new System.EventHandler(this.tsbtnShowTheOrder_Click);
+            this.tsbtnShowTheOrder.Size = new System.Drawing.Size(56, 22);
+            this.tsbtnShowTheOrder.Text = "Update";
+            this.tsbtnShowTheOrder.Click += new System.EventHandler(this.tsbtnShowTheOrder_Click_1);
             // 
             // tsbtnAdd
             // 
@@ -87,7 +75,7 @@ namespace Restaurant_AB1506
             this.tsbtnAdd.Name = "tsbtnAdd";
             this.tsbtnAdd.Size = new System.Drawing.Size(37, 22);
             this.tsbtnAdd.Text = "Add";
-            this.tsbtnAdd.Click += new System.EventHandler(this.tsbtnAdd_Click);
+            this.tsbtnAdd.Click += new System.EventHandler(this.tsbtnAdd_Click_1);
             // 
             // tsbtnClear
             // 
@@ -96,9 +84,9 @@ namespace Restaurant_AB1506
             this.tsbtnClear.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnClear.Image")));
             this.tsbtnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnClear.Name = "tsbtnClear";
-            this.tsbtnClear.Size = new System.Drawing.Size(45, 22);
-            this.tsbtnClear.Text = "Clear";
-            this.tsbtnClear.Click += new System.EventHandler(this.tsbtnClear_Click);
+            this.tsbtnClear.Size = new System.Drawing.Size(51, 22);
+            this.tsbtnClear.Text = "Delete";
+            this.tsbtnClear.Click += new System.EventHandler(this.tsbtnClear_Click_1);
             // 
             // tsbtnExit
             // 
@@ -109,76 +97,73 @@ namespace Restaurant_AB1506
             this.tsbtnExit.Name = "tsbtnExit";
             this.tsbtnExit.Size = new System.Drawing.Size(35, 22);
             this.tsbtnExit.Text = "Exit";
-            this.tsbtnExit.Click += new System.EventHandler(this.tsbtnExit_Click);
+            this.tsbtnExit.Click += new System.EventHandler(this.tsbtnExit_Click_1);
             // 
-            // lblQuantity
+            // txtName
             // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold);
-            this.lblQuantity.Location = new System.Drawing.Point(180, 48);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(71, 18);
-            this.lblQuantity.TabIndex = 4;
-            this.lblQuantity.Text = "Quantity";
+            this.txtName.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtName.Location = new System.Drawing.Point(71, 92);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(193, 22);
+            this.txtName.TabIndex = 44;
             // 
-            // lblAnswer
+            // txtID
             // 
-            this.lblAnswer.AutoSize = true;
-            this.lblAnswer.BackColor = System.Drawing.Color.DarkSalmon;
-            this.lblAnswer.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold);
-            this.lblAnswer.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAnswer.Location = new System.Drawing.Point(171, 116);
-            this.lblAnswer.Name = "lblAnswer";
-            this.lblAnswer.Size = new System.Drawing.Size(0, 18);
-            this.lblAnswer.TabIndex = 5;
+            this.txtID.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtID.Location = new System.Drawing.Point(71, 59);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(193, 22);
+            this.txtID.TabIndex = 43;
             // 
-            // cmbOrder
+            // lblName
             // 
-            this.cmbOrder.FormattingEnabled = true;
-            this.cmbOrder.Location = new System.Drawing.Point(16, 81);
-            this.cmbOrder.Name = "cmbOrder";
-            this.cmbOrder.Size = new System.Drawing.Size(121, 21);
-            this.cmbOrder.TabIndex = 8;
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblName.Location = new System.Drawing.Point(11, 95);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(43, 14);
+            this.lblName.TabIndex = 42;
+            this.lblName.Text = "Name";
             // 
-            // dmOrder
+            // lblID
             // 
-            this.dmOrder.Location = new System.Drawing.Point(192, 82);
-            this.dmOrder.Name = "dmOrder";
-            this.dmOrder.Size = new System.Drawing.Size(46, 20);
-            this.dmOrder.TabIndex = 9;
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblID.Location = new System.Drawing.Point(30, 59);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(24, 14);
+            this.lblID.TabIndex = 41;
+            this.lblID.Text = "ID";
             // 
-            // frmRiceFood
+            // AddChickenFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tomato;
-            this.ClientSize = new System.Drawing.Size(346, 270);
-            this.Controls.Add(this.dmOrder);
-            this.Controls.Add(this.cmbOrder);
-            this.Controls.Add(this.lblAnswer);
-            this.Controls.Add(this.lblQuantity);
+            this.ClientSize = new System.Drawing.Size(298, 153);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.lblOrder);
-            this.Name = "frmRiceFood";
-            this.Text = "Rice Food";
+            this.Name = "AddChickenFood";
+            this.Text = "AddChickenFood";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dmOrder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblOrder;
+
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tsbtnAdd;
         private System.Windows.Forms.ToolStripButton tsbtnShowTheOrder;
         private System.Windows.Forms.ToolStripButton tsbtnClear;
         private System.Windows.Forms.ToolStripButton tsbtnExit;
-        private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.Label lblAnswer;
-        private System.Windows.Forms.ComboBox cmbOrder;
-        private System.Windows.Forms.NumericUpDown dmOrder;
-        private System.Windows.Forms.ToolStripButton tsbtnAdd;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblID;
     }
 }

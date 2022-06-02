@@ -69,13 +69,6 @@ namespace Restaurant_AB1506
 
         }
 
-        private void btnDataBase_Click(object sender, EventArgs e)
-        {
-            frmDataBase frmdata = new frmDataBase();
-            frmdata.TopLevel = false;
-            frmdata.Dock = DockStyle.Fill;
-            this.panel3.Controls.Add(frmdata);
-            frmdata.Show();
-        }
+
     }
 }

@@ -32,6 +32,7 @@ namespace Restaurant_AB1506
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMeatFood));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnShowTheOrder = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbtnClear = new System.Windows.Forms.ToolStripButton();
             this.tsbtnExit = new System.Windows.Forms.ToolStripButton();
             this.lblOrder = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@ namespace Restaurant_AB1506
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbtnShowTheOrder,
+            this.tsbtnAdd,
             this.tsbtnClear,
             this.tsbtnExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -65,6 +67,17 @@ namespace Restaurant_AB1506
             this.tsbtnShowTheOrder.Size = new System.Drawing.Size(116, 22);
             this.tsbtnShowTheOrder.Text = "Show The Order";
             this.tsbtnShowTheOrder.Click += new System.EventHandler(this.tsbtnShowTheOrder_Click);
+            // 
+            // tsbtnAdd
+            // 
+            this.tsbtnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbtnAdd.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tsbtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAdd.Image")));
+            this.tsbtnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAdd.Name = "tsbtnAdd";
+            this.tsbtnAdd.Size = new System.Drawing.Size(37, 22);
+            this.tsbtnAdd.Text = "Add";
+            this.tsbtnAdd.Click += new System.EventHandler(this.tsbtnAdd_Click);
             // 
             // tsbtnClear
             // 
@@ -167,5 +180,6 @@ namespace Restaurant_AB1506
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.NumericUpDown dmOrder;
         private System.Windows.Forms.ComboBox cmbOrder;
+        private System.Windows.Forms.ToolStripButton tsbtnAdd;
     }
 }

@@ -32,6 +32,7 @@ namespace Restaurant_AB1506
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChickenFood));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnShowTheOrder = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbtnClear = new System.Windows.Forms.ToolStripButton();
             this.tsbtnExit = new System.Windows.Forms.ToolStripButton();
             this.lblOrder = new System.Windows.Forms.Label();
@@ -47,11 +48,12 @@ namespace Restaurant_AB1506
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbtnShowTheOrder,
+            this.tsbtnAdd,
             this.tsbtnClear,
             this.tsbtnExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(346, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(316, 25);
             this.toolStrip1.TabIndex = 15;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -65,6 +67,17 @@ namespace Restaurant_AB1506
             this.tsbtnShowTheOrder.Size = new System.Drawing.Size(116, 22);
             this.tsbtnShowTheOrder.Text = "Show The Order";
             this.tsbtnShowTheOrder.Click += new System.EventHandler(this.tsbtnShowTheOrder_Click);
+            // 
+            // tsbtnAdd
+            // 
+            this.tsbtnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbtnAdd.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Bold);
+            this.tsbtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAdd.Image")));
+            this.tsbtnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAdd.Name = "tsbtnAdd";
+            this.tsbtnAdd.Size = new System.Drawing.Size(37, 22);
+            this.tsbtnAdd.Text = "Add";
+            this.tsbtnAdd.Click += new System.EventHandler(this.tsbtnAdd_Click);
             // 
             // tsbtnClear
             // 
@@ -139,7 +152,7 @@ namespace Restaurant_AB1506
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tomato;
-            this.ClientSize = new System.Drawing.Size(346, 270);
+            this.ClientSize = new System.Drawing.Size(316, 260);
             this.Controls.Add(this.dmOrder);
             this.Controls.Add(this.cmbOrder);
             this.Controls.Add(this.toolStrip1);
@@ -167,5 +180,6 @@ namespace Restaurant_AB1506
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.NumericUpDown dmOrder;
         private System.Windows.Forms.ComboBox cmbOrder;
+        private System.Windows.Forms.ToolStripButton tsbtnAdd;
     }
 }

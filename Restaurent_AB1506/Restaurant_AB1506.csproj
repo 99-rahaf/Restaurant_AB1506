@@ -46,18 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add\AddChickenFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\AddChickenFood.Designer.cs">
+      <DependentUpon>AddChickenFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\AddMeatFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\AddMeatFood.Designer.cs">
+      <DependentUpon>AddMeatFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\AddRiceFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\AddRiceFood.Designer.cs">
+      <DependentUpon>AddRiceFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add\AddSandwiches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add\AddSandwiches.Designer.cs">
+      <DependentUpon>AddSandwiches.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chicken Food.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Chicken Food.Designer.cs">
       <DependentUpon>Chicken Food.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Price.cs" />
-    <Compile Include="DataBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DataBase.designer.cs">
-      <DependentUpon>DataBase.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -79,6 +96,11 @@
     <Compile Include="Restaurant.Designer.cs">
       <DependentUpon>Restaurant.cs</DependentUpon>
     </Compile>
+    <Compile Include="database\Restaurant_AB1506DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Restaurant_AB1506DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RiceFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,11 +114,20 @@
       <DependentUpon>Sandwiches.cs</DependentUpon>
     </Compile>
     <Compile Include="Users.cs" />
+    <EmbeddedResource Include="Add\AddChickenFood.resx">
+      <DependentUpon>AddChickenFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\AddMeatFood.resx">
+      <DependentUpon>AddMeatFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\AddRiceFood.resx">
+      <DependentUpon>AddRiceFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add\AddSandwiches.resx">
+      <DependentUpon>AddSandwiches.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Chicken Food.resx">
       <DependentUpon>Chicken Food.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataBase.resx">
-      <DependentUpon>DataBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -131,9 +162,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="database\Restaurant_AB1506DataSet.xsc">
+      <DependentUpon>Restaurant_AB1506DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="database\Restaurant_AB1506DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Restaurant_AB1506DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="database\Restaurant_AB1506DataSet.xss">
+      <DependentUpon>Restaurant_AB1506DataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database\Restaurant_AB1506.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

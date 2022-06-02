@@ -37,7 +37,6 @@ namespace Restaurant_AB1506
             this.btnMeatfood = new System.Windows.Forms.Button();
             this.btnricefood = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnDataBase = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +66,6 @@ namespace Restaurant_AB1506
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnDataBase);
             this.panel2.Controls.Add(this.btnsandwiches);
             this.panel2.Controls.Add(this.btnchickenfood);
             this.panel2.Controls.Add(this.btnMeatfood);
@@ -81,9 +79,9 @@ namespace Restaurant_AB1506
             // btnsandwiches
             // 
             this.btnsandwiches.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold);
-            this.btnsandwiches.Location = new System.Drawing.Point(9, 159);
+            this.btnsandwiches.Location = new System.Drawing.Point(3, 159);
             this.btnsandwiches.Name = "btnsandwiches";
-            this.btnsandwiches.Size = new System.Drawing.Size(107, 26);
+            this.btnsandwiches.Size = new System.Drawing.Size(119, 26);
             this.btnsandwiches.TabIndex = 3;
             this.btnsandwiches.Text = "Sandwiches";
             this.btnsandwiches.UseVisualStyleBackColor = true;
@@ -92,9 +90,9 @@ namespace Restaurant_AB1506
             // btnchickenfood
             // 
             this.btnchickenfood.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold);
-            this.btnchickenfood.Location = new System.Drawing.Point(9, 116);
+            this.btnchickenfood.Location = new System.Drawing.Point(3, 116);
             this.btnchickenfood.Name = "btnchickenfood";
-            this.btnchickenfood.Size = new System.Drawing.Size(107, 26);
+            this.btnchickenfood.Size = new System.Drawing.Size(119, 26);
             this.btnchickenfood.TabIndex = 2;
             this.btnchickenfood.Text = "Chicken Food";
             this.btnchickenfood.UseVisualStyleBackColor = true;
@@ -103,9 +101,9 @@ namespace Restaurant_AB1506
             // btnMeatfood
             // 
             this.btnMeatfood.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMeatfood.Location = new System.Drawing.Point(9, 74);
+            this.btnMeatfood.Location = new System.Drawing.Point(3, 74);
             this.btnMeatfood.Name = "btnMeatfood";
-            this.btnMeatfood.Size = new System.Drawing.Size(107, 26);
+            this.btnMeatfood.Size = new System.Drawing.Size(119, 26);
             this.btnMeatfood.TabIndex = 1;
             this.btnMeatfood.Text = "Meat Food";
             this.btnMeatfood.UseVisualStyleBackColor = true;
@@ -114,9 +112,9 @@ namespace Restaurant_AB1506
             // btnricefood
             // 
             this.btnricefood.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold);
-            this.btnricefood.Location = new System.Drawing.Point(9, 29);
+            this.btnricefood.Location = new System.Drawing.Point(3, 29);
             this.btnricefood.Name = "btnricefood";
-            this.btnricefood.Size = new System.Drawing.Size(107, 26);
+            this.btnricefood.Size = new System.Drawing.Size(119, 26);
             this.btnricefood.TabIndex = 0;
             this.btnricefood.Text = "Rice Food";
             this.btnricefood.UseVisualStyleBackColor = true;
@@ -131,17 +129,6 @@ namespace Restaurant_AB1506
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(296, 264);
             this.panel3.TabIndex = 2;
-            // 
-            // btnDataBase
-            // 
-            this.btnDataBase.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDataBase.Location = new System.Drawing.Point(9, 203);
-            this.btnDataBase.Name = "btnDataBase";
-            this.btnDataBase.Size = new System.Drawing.Size(107, 26);
-            this.btnDataBase.TabIndex = 4;
-            this.btnDataBase.Text = "DataBase";
-            this.btnDataBase.UseVisualStyleBackColor = true;
-            this.btnDataBase.Click += new System.EventHandler(this.btnDataBase_Click);
             // 
             // frmLogin
             // 
@@ -171,6 +158,5 @@ namespace Restaurant_AB1506
         private System.Windows.Forms.Button btnMeatfood;
         private System.Windows.Forms.Button btnricefood;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnDataBase;
     }
 }

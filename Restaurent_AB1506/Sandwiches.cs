@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.OleDb;
+
 
 namespace Restaurant_AB1506
 {
@@ -13,10 +15,7 @@ namespace Restaurant_AB1506
         public frmSandwiches()
         {
             InitializeComponent();
-            cmbOrder.Items.Add(new Price { Name = "Shawarma - $3", Value = 3 });
-            cmbOrder.Items.Add(new Price { Name = "hamburger - $4", Value = 4 });
-            cmbOrder.Items.Add(new Price { Name = "fajita - $5", Value = 5 });
-            cmbOrder.Items.Add(new Price { Name = "zinger - $4", Value = 4 });
+            fill_ListBox();
         }
 
         private void tsbtnClear_Click(object sender, EventArgs e)
@@ -32,13 +31,40 @@ namespace Restaurant_AB1506
 
         private void tsbtnShowTheOrder_Click(object sender, EventArgs e)
         {
-            int x, y, d;
+            
+            lblAnswer.Text = " Order : \n" + cmbOrder.SelectedItem + "\n Quantity : \n " + dmOrder.Text ;
+        }
 
-            x = Convert.ToInt32(((Price)cmbOrder.SelectedItem).Value);
-            y = Convert.ToInt32(dmOrder.Value);
+        private void tsbtnAdd_Click(object sender, EventArgs e)
+        {
+            AddSandwiches addsa = new AddSandwiches();
+            addsa.Show();
+        }
+        string data = "Provider = Microsoft.ACE.OLEDB.12.0; " +
+            "Data Source = C:\\Users\\SCHOOL\\Desktop\\rahaf AB1506\\Restaurent_AB1506\\Restaurent_AB1506\\database\\Restaurant_AB1506.accdb";
+        void fill_ListBox()
+        {
+            try
+            {
 
-            d = x * y;
-            lblAnswer.Text = " Order : \n" + cmbOrder.SelectedItem + "\n Quantity : \n " + dmOrder.Text + "\n Price : " + d;
+                OleDbConnection con = new OleDbConnection(data);
+                con.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = con;
+                string selection = "Select Sandwiches from Sandwiches";
+                command.CommandText = selection;
+                OleDbDataReader myReader = command.ExecuteReader();
+
+                while (myReader.Read())
+                {
+                    cmbOrder.Items.Add(myReader["Sandwiches"].ToString());
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error  " + ex);
+            }
         }
     }
 }
