@@ -19,7 +19,7 @@ namespace Restaurant_AB1506
             InitializeComponent();
         }
         string data = "Provider = Microsoft.ACE.OLEDB.12.0; " +
-            "Data Source = C:\\Users\\SCHOOL\\Desktop\\rahaf AB1506\\Restaurent_AB1506\\Restaurent_AB1506\\database\\Restaurant_AB1506.accdb";
+            "Data Source = Restaurant_AB1506.accdb";
         void GetAllCourses()
         {
             OleDbConnection con = new OleDbConnection(data);
